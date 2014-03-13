@@ -1,6 +1,7 @@
 /* any stylesheet files in this directory will automatically be included in application.css */
 /* the .scss extention says that this is a SASSY CSS file */
 /* bootstrap is SASS so we need it for bootstrap to work */
+/* colors can be defined as variables in Sass like $lightgray: #999, but bootstrap already defines these colors. the bootstrap gem converst from sass to less*/
 
 @import "bootstrap";
 
