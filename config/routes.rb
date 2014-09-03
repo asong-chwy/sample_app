@@ -1,5 +1,5 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
+  resources :users
 
   # This arranges both for a valid page at /whatever and a named route called whatever_path
   # this code maps the root URI / to /static_pages/home, and also gives URI root_path = / root_url = http://localhost:3000
