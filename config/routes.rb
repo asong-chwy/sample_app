@@ -1,11 +1,14 @@
 SampleApp::Application.routes.draw do
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   # This arranges both for a valid page at /whatever and a named route called whatever_path
   # this code maps the root URI / to /static_pages/home, and also gives URI root_path = / root_url = http://localhost:3000
   root to: 'static_pages#home'
 
   match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   match '/help',    to: 'static_pages#help'
   # about_path = /about about_url = http://localhost:3000/about
