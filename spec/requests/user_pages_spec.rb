@@ -84,9 +84,9 @@ describe "User Pages" do
           fill_in "Name",       with: new_name
           fill_in "Email",      with: new_email
           fill_in "Password",   with: user.password
-          fill_in "Confirm Password", with: user.password
+          fill_in "Password confirmation", with: user.password
 
-          click_button "Save Changes"
+          click_button "Save changes"
         end
 
         it { should have_selector('title', text: new_name) }

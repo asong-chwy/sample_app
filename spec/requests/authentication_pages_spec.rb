@@ -34,6 +34,7 @@ describe "Authentication" do
   				fill_in "Email", 	with: user.email
   				fill_in "Password", with: user.password
   				click_button "Sign in"
+          cookies[:remember_token] = user.remember_token
   		  end
 
 			  it { should have_selector('title', text: user.name) }
