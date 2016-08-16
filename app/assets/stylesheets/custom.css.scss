@@ -61,7 +61,6 @@ h2 {
 	margin-bottom: 30px;
 	text-align: center;
 	font-weight: normal;
-	color: $grayLight;
 }
 
 p {
@@ -98,6 +97,8 @@ aside {
 	margin-right: 10px;
 }
 
+
+
 /* header */
 
 #logo {
@@ -123,7 +124,8 @@ footer {
 	margin-top: 45px;
 	padding-top: 5px;
 	border-top: 1px solid $grayMediumLight;
-	color: $grayLight;
+	/*color: $grayLight;*/
+	color: $red;
 	a {
 		color: $gray;
 		/* Sass changes &:hover attribute into #logo:hover as part of converting from SCSS to CSS */
@@ -143,6 +145,16 @@ footer {
 		}
 	}
 	
+	/* miscellaneous */
+	.debug_dump {
+		clear: both;
+		float: left;
+		width: 100%;
+		margin-top: 45px;
+		@include box_sizing;
+	}	
+}
+
 /* forms */ 
 
 input, textarea, select, .uneditable-input {
@@ -184,12 +196,29 @@ input {
 	}
 }
 
-/* miscellaneous */
-.debug_dump {
-	clear: both;
-	float: left;
-	width: 100%;
-	margin-top: 45px;
-	@include box_sizing;
-}	
+/* microposts */
+.microposts {
+	list-style: none;
+	margin: 10px 0 0 0;
+
+	li {
+		padding: 10px 0;
+		border-top: 1px solid #e8e8c8;
+	}
+}
+.content {
+	display: block;
+}
+.timestamp {
+	color: $grayLight;
+}
+.gravatar {
+	float: right;
+	margin-right: 10px;
+}
+aside {
+	textarea {
+		height: 100px;
+		margin-bottom: 5px;
+	}
 }

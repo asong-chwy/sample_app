@@ -1,0 +1,4 @@
+Questions:
+So I had a bug that took me a while to discover. One of my tests in authentication_pages_spec.rb was failing because I had 'delete microposts_path' vs. 'delete micropost_path' Why is there a micropost_path AND A microposts_path? It is so confusing!!!
+
+Need to understand routes in rails a bit better

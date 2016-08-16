@@ -35,6 +35,9 @@ describe "StaticPages" do
 
     it_should_behave_like "all static pages"
     it { should_not have_selector 'title', text: '| Home' }
+
+    it { should_not have_link('Profile') }
+    it { should_not have_link('Settings') }
   end
 
   describe "Help page" do
